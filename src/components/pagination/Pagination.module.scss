@@ -1,0 +1,53 @@
+@import "src/styles/colors";
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  padding: 16px 24px 23px;
+
+  &-arrow {
+    cursor: pointer;
+  }
+
+  &-additional {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-select {
+    outline: 1px solid black;
+  }
+
+  &-total {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-6;
+    margin-right: 8px;
+  }
+
+  &-number {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-7;
+    margin: 0 8px;
+
+    &_blue {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      padding: 0 8px;
+      color: $blue;
+      border: 1px solid $blue;
+      border-radius: 2px;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import 'src/styles/colors';
+
+.common {
+  display: flex;
+  flex-direction: row;
+
+  width: 100vw;
+  height: 100vh;
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100vh;
+    position: relative;
+
+    background: white;
+
+    &-background {
+      position: absolute;
+      filter: blur(10px);
+
+      z-index: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    &-image {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+
+      transform: translate(50%, -50%) scale(1.8);
+      transition: .3s all ease-in;
+
+      width: 150px;
+      height: 150px;
+
+      padding: 8px;
+      border: 2px solid $blue;
+      border-radius: 50%;
+    }
+
+    &-title {
+      display: flex;
+      color: $blue;
+      margin-bottom: 40px;
+
+      font-size: 50px;
+
+      border: 4px solid $blue;
+      padding: 16px;
+      transition: .3s all ease-in;
+      z-index: 1;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: .3s all ease-in;
+      }
+    }
+
+    &:hover {
+      .common-link-image {
+        transform: translate(50%, -50%) scale(2.2);
+        transition: .3s all ease-in;
+      }
+    }
+  }
+}

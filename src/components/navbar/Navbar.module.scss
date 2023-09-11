@@ -1,0 +1,79 @@
+@import "src/styles/colors";
+
+.navbar {
+  padding: 12px 100px;
+  display: flex;
+  background: white;
+  flex-direction: row;
+  gap: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 24px rgba(0, 0, 0, 0.08);
+
+  &-popup {
+    position: absolute;
+    top: 40px;
+    left: 35px;
+    opacity: 0;
+    display: flex;
+    transition: .3s all linear .5s;
+    flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: .5px solid $gray-3;
+    border-radius: 6px;
+    background: $gray-2;
+    padding: 8px 0;
+    z-index: 0;
+    width: 200px;
+
+    &-text {
+      padding: 8px 20px;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $geekblue-10;
+
+      &:first-child {
+        font-weight: 500;
+        color: $blue;
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-6;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &_active {
+      font-weight: 600;
+
+      &::before {
+        background: $blue;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        bottom: -14px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.navbar-item-wrapper:hover {
+  .navbar-popup {
+    opacity: 1;
+    z-index: 2;
+    transition: .2s all linear;
+  }
+}
+
+.navbar-popup:hover {
+  opacity: 1 !important;
+}

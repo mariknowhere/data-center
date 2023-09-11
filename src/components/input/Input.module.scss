@@ -1,0 +1,38 @@
+@import "src/styles/colors";
+
+.input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  padding: 7px 12px;
+
+  &_readonly {
+    cursor: pointer;
+    background-color: $gray-2;
+
+    &:hover {
+      transition: background-color .2s ease-in;
+
+      background-color: $gray-3;
+    }
+  }
+
+  &-checkbox {
+    width: fit-content;
+    margin: 4px 0 0 4px;
+  }
+
+  &-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-image {
+    position: absolute;
+    top: 32px;
+    right: 13px;
+  }
+}

@@ -1,0 +1,140 @@
+@import "src/styles/colors";
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &-button {
+    width: fit-content;
+
+    &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+
+      width: 100%;
+    }
+
+    &_active {
+      color: white;
+      background: #030852;
+      outline: none;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.043);
+
+      &:hover {
+        color: $blue;
+        background: transparent;
+        outline: 1px solid $blue;
+
+        &::before {
+          content: "+";
+        }
+      }
+
+      &::before {
+        content: '-';
+      }
+    }
+  }
+
+  &-search {
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+
+      max-width: 430px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &-inputs {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+  }
+
+  &-input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding: 7px 12px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $geekblue-10;
+    }
+
+    &-wrapper {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-right: 8px;
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 10px;
+      right: 13px;
+    }
+
+    &-list {
+      pointer-events: none;
+    }
+
+    &-date {
+      pointer-events: none;
+      padding: 5px 18px 5px 12px;
+
+      &-long {
+        padding: 5px 55px 5px 12px;
+      }
+    }
+
+    &-placeholder {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      top: 5px;
+      left: 12px;
+    }
+
+    &-swap {
+      margin: 0 8px;
+    }
+
+    &-calendar {
+      margin-left: 8px;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $gray-6;
+    }
+  }
+}

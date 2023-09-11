@@ -1,0 +1,18 @@
+@import "src/styles/colors";
+
+.calendar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding: 7px 12px;
+  }
+}

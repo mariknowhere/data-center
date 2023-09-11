@@ -1,0 +1,59 @@
+@import "src/styles/colors";
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+
+  &-wrapper {
+    position: relative;
+
+    &_secondary {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        height: fit-content;
+      }
+    }
+  }
+
+  &-text {
+    position: relative;
+
+    font-weight: 400;
+    color: $geekblue-10;
+    width: fit-content;
+    margin-bottom: 4px;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &_helper {
+      z-index: 1;
+      position: absolute;
+      top: -8px;
+      left: 10px;
+      background: white;
+      padding: 0 4px;
+    }
+
+    &_required {
+      &::after {
+        content: '*';
+        display: flex;
+
+        position: absolute;
+        color: $red;
+        right: -8px;
+      }
+    }
+
+    &_danger {
+      margin-top: 6px;
+      color: $red;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "src/styles/colors";
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: .5px solid $gray-4;
+
+  &_checked {
+    width: 40px;
+  }
+
+  &-head {
+    width: 100%;
+    border-bottom: .5px solid $gray-4;
+
+    &-item {
+      padding: 8px;
+      background: $gray-2;
+
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        border-right: .5px solid $gray-4;
+      }
+
+      &-text {
+        display: block;
+        font-weight: 600;
+        color: $geekblue-10;
+      }
+
+      &-image {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  &-body {
+    border-bottom: .5px solid $gray-4;
+
+    &-row {
+      cursor: pointer;
+      border-bottom: .5px solid $gray-4;
+      background: white;
+
+      &:hover {
+        position: relative;
+        background: $geekblue-1;
+      }
+    }
+
+    &-data {
+      padding: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      word-break: break-word;
+      color: $geekblue-10;
+
+      &-verification {
+        &_green {
+          color: $green;
+        }
+
+        &_red {
+          color: $red;
+        }
+      }
+
+      &:not(:last-child) {
+        border-right: .5px solid $gray-4;
+      }
+    }
+
+    &-text {
+      padding: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: right;
+      color: $geekblue-10;
+
+      &:not(:last-child) {
+        border-right: .5px solid $gray-4;
+      }
+    }
+  }
+}
+
+.table-body-row:has(input:checked) {
+  background: $geekblue-1 !important;
+}

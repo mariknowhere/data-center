@@ -1,0 +1,23 @@
+@import '../../styles/textMixins';
+@import '../../styles/colors';
+
+.text {
+  display: flex;
+  word-break: break-word;
+
+  &-xs {
+    @include xs-size-mixin;
+  }
+
+  &-s {
+    @include s-size-mixin;
+  }
+
+  &-m {
+    @include m-size-mixin;
+  }
+
+  &-l {
+    @include l-size-mixin;
+  }
+}

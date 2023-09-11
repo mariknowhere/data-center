@@ -1,0 +1,212 @@
+@import "src/styles/colors";
+
+.vuln {
+  &-content {
+    padding: 20px 100px;
+    position: relative;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      background: white;
+      padding: 24px;
+      width: 20%;
+
+      &-secondary {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 40%;
+
+        padding: 24px 24px 20px;
+        background: white;
+
+        &-close {
+          width: 25px;
+          height: 25px;
+
+          &-wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            background: white;
+            border: 1px solid $gray-5;
+          }
+        }
+
+        &-screenshot {
+          max-width: 100%;
+          max-height: 200px;
+
+          &-wrapper {
+            position: relative;
+          }
+        }
+
+        &-screenshots {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          place-items: center;
+          gap: 12px;
+
+          &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+        }
+
+        &-title {
+          font-weight: 700;
+          color: $geekblue-10;
+        }
+
+        &-list {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      &-title {
+        font-weight: 700;
+        color: $geekblue-10;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  &-panel {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      padding: 24px;
+      background: white;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-title {
+        font-weight: 700;
+        color: $geekblue-10;
+      }
+
+      &-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+
+        &_secondary {
+          padding-top: 16px;
+          border-top: 1px solid $gray-4;
+        }
+      }
+    }
+
+    &-divider {
+      width: 100%;
+      height: 24px;
+      background: white;
+      margin-bottom: 24px;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      background: white;
+
+      &-title {
+        color: $geekblue-10;
+        margin-bottom: 24px;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px 30px;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px !important;
+
+        min-width: 170px;
+        width: 45%;
+
+        &_secondary {
+          display: flex;
+          flex-direction: row !important;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        &-title {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: $geekblue-10 !important;
+        }
+
+        &-text {
+          font-weight: 600;
+          font-size: 14px;
+          color: black;
+        }
+      }
+    }
+  }
+
+  &-risk-level {
+    &_critical {
+      color: #cc0500;
+    }
+
+    &_high {
+      color: #df3d03;
+    }
+
+    &_medium {
+      color: #f9a009;
+    }
+
+    &_low {
+      color: #ffcb0d;
+    }
+
+    &_info {
+      color: $green;
+    }
+  }
+}

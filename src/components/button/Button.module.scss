@@ -1,0 +1,68 @@
+@import "src/styles/colors";
+
+.button {
+  position: relative;
+  cursor: pointer;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: .3s all linear;
+
+  &-text {
+    font-weight: 600;
+  }
+
+  &_blue {
+    color: white;
+    background: linear-gradient(0deg, #166BEC 0%, #5398FF 100%), #2478F8;
+
+    &:hover {
+      color: black;
+      background: white;
+      outline: 1px solid #2478F8;
+    }
+  }
+
+  &_red {
+    color: $blue;
+    outline: 1px solid $blue;
+
+    &:hover {
+      color: white;
+      background: $red;
+      outline: 1px solid black;
+    }
+  }
+
+  &_white {
+    padding: 5px 10px 5px 25px;
+    color: $blue;
+    background: transparent;
+    outline: 1px solid $blue;
+
+    &::before {
+      content: "+";
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      width: 15px;
+      font-weight: 500;
+
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translate(0, -50%);
+    }
+
+    &:hover {
+      color: white;
+      background: #030852;
+      outline: none;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.043);
+
+      &::before {
+        content: '-';
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import "src/styles/colors";
+
+.analytics {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 24px 100px 32px;
+
+  &_disabled {
+    color: $gray-5;
+  }
+
+  &-content {
+    background: white;
+    padding: 24px 24px 16px;
+    max-width: 80vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-panel {
+    display: flex;
+    flex-direction: column;
+
+    &-toggle {
+      padding: 4px;
+      color: black;
+      transition: .3s all linear;
+
+      &-container {
+        border: 1px solid $gray-5;
+
+        &:last-child {
+          border-left: none;
+        }
+      }
+
+      &_active {
+        transition: .3s all linear;
+        background: $blue;
+        color: $gray-2;
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+    }
+
+    &-title {
+      margin-bottom: 24px;
+    }
+
+    &-topic {
+      margin-bottom: 6px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-checkbox {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 8px;
+
+      &_solo {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-inputs {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      &_secondary {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-text {
+      color: $red;
+      margin: -10px 0 6px;
+    }
+
+    &-button {
+      width: fit-content;
+    }
+  }
+}

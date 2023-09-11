@@ -1,0 +1,8 @@
+.idea
+
+./public/docx_reports
+./public/screenshots
+./screenshots
+./docx_reports
+./build
+./node_modules

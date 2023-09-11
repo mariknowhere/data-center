@@ -1,0 +1,66 @@
+@import "../../styles/colors";
+
+.menu {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 376px;
+    height: 100%;
+    background-color: white;
+    float: right;
+    padding: 24px;
+
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+
+      color: $geekblue-10;
+    }
+
+    &-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      height: 100%;
+    }
+
+    &-input {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+
+      border: 1px solid #D9D9D9;
+      border-radius: 4px;
+      padding: 7px 12px;
+
+      &-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $geekblue-10;
+      }
+
+      &-arrow {
+        position: absolute;
+        top: 32px;
+        right: 13px;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+  }
+}

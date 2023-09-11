@@ -1,0 +1,24 @@
+@import "src/styles/colors";
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &_active {
+    .project-item-title,
+    .project-item-text {
+      color: $blue;
+    }
+  }
+
+  &-title {
+    font-weight: 400;
+    color: #B3BDCE;
+  }
+
+  &-text {
+    font-weight: 600;
+    color: $geekblue-10;
+  }
+}

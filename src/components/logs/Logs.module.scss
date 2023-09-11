@@ -1,0 +1,45 @@
+@import "src/styles/colors";
+
+.logs {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 24px;
+
+  background: white;
+  overflow: auto;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    max-height: 30%;
+    margin-top: 32px;
+    padding-bottom: 32px;
+
+    &_full {
+      max-height: 60%;
+    }
+  }
+
+  &-text {
+    cursor: pointer;
+    display: block;
+
+    &:not(:last-child) {
+      padding-bottom: 6px;
+      border-bottom: 1px solid $gray-5;
+    }
+
+    &:not(:first-child) {
+      padding-top: 6px;
+    }
+
+    &-user {
+      color: $blue;
+    }
+  }
+}

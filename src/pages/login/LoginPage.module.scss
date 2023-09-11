@@ -1,0 +1,188 @@
+@import "src/styles/colors";
+
+.login {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+
+  &-left-panel {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 110px 100px 130px;
+    background: linear-gradient(139.51deg, #166BEC 0%, #5398FF 117.86%), linear-gradient(0deg, #2478F8, #2478F8);
+
+    &-logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      display: inline-block;
+      max-width: 80%;
+      font-size: 24px;
+      line-height: 36px;
+      color: white;
+    }
+
+    &-photo {
+      height: fit-content;
+      width: fit-content;
+
+      &-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 90px;
+      }
+    }
+  }
+
+  &-right-panel {
+    position: relative;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+
+    &-block {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+    }
+
+    &-title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 12px;
+      color: $geekblue-10;
+    }
+
+    &-inputs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-input-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+
+    &-input {
+      padding: 8px 12px;
+      line-height: 22px;
+      max-width: 320px;
+      width: 100%;
+      border: 1px solid $gray-5;
+      border-radius: 6px;
+    }
+
+    &-label {
+      color: $geekblue-10;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 4px;
+
+      &_danger {
+        margin-top: 4px;
+        color: $red;
+      }
+    }
+
+    &-label-require {
+      margin-left: 4px;
+      color: $red;
+    }
+
+    &-eye {
+      position: absolute;
+      top: 32px;
+      right: -12px;
+    }
+
+    &-checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 24px;
+
+      &-input {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+      }
+
+      &-label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+
+      &-label-blue {
+        color: $geekblue-4;
+        font-weight: 300;
+        margin-left: 4px;
+      }
+
+      &-label-require {
+        color: $red;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-button {
+      cursor: pointer;
+      padding: 8px 80px;
+      border: none;
+      border-radius: 5px;
+      background: $blue;
+      transition: .3s all linear;
+
+      &:hover {
+        transition: .3s all linear;
+        padding: 7px 80px;
+        background: white;
+        outline: 1px solid #2478F8;
+
+        .login-right-panel-button-text {
+          transition: .3s all linear;
+          color: black;
+        }
+      }
+    }
+
+    &-button-text {
+      color: white;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      &-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+
+      &-button {
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        background: transparent;
+        text-decoration: underline;
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.object {
+  &-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-height: 450px;
+    overflow: auto;
+    padding: 2px 12px;
+  }
+}
